@@ -7,8 +7,8 @@ module RequestLocalCache
         app.config.middleware.insert_after Rack::MethodOverride, RequestLocalCache::Middleware
       end
 
-      if ActionDispatch.const_defined?(:Reloader) && ActionDispatch::Reloader.respond_to?(:to_cleanup)
-        ActionDispatch::Reloader.to_prepare do
+      if ActiveSupport.const_defined?(:Reloader) && ActiveSupport::Reloader.respond_to?(:to_complete)
+        ActiveSupport::Reloader.to_prepare do
           RequestLocalCache.clear!
         end
       end
