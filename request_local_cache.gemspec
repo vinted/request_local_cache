@@ -6,7 +6,7 @@ require 'request_local_cache/version'
 Gem::Specification.new do |spec|
   spec.name          = 'request_local_cache'
   spec.version       = RequestLocalCache::VERSION
-  spec.authors       = ['Karolis Astrauka']
+  spec.authors       = ['Vinted']
   spec.email         = ['admin@vinted.com']
 
   spec.summary       = %q{RequestLocalCache gives you per-request cache}
